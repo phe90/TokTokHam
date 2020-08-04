@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+<head>
+<meta charset="utf-8">
+<!--  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 인터넷 익스플로 최신버전으로 동작해라 -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--반응형으로 만들때 필요함  -->
+<title>TokTok Ham!</title>
+<!--****************************************************************************-->
+<!-- C:\exampro\.metadata\.plugins\org.eclipse.wst.server.core -> 서버 포트 변경 -->
+<!--****************************************************************************-->
+<!-- Bootstrap -->
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-theme.css" rel="stylesheet">
+<link href="css/custom2.css" rel="stylesheet">
+<link href="css/kfonts2.css" rel="stylesheet">
+<style>
+
+body {
+	padding-top: 20px;
+}
+
+.sidebar { 	 
+     background-color: #ffcb3b;
+     width: 350;
+     position: fixed;
+     float: left;
+     margin: 0;
+     padding: 0;
+     top: 0;
+     left: 0;
+     bottom: 0;
+     height : 100%;
+     cursor: default;
+     overflow-y: auto;
+     z-index: 100;
+ }
+    
+ul.text-center{
+	padding: 0px;
+	margin: 0px;
+}
+
+
+
+ </style>
+
+</head>
+
+
+<body>
+<div class="container">
+<!--NAVBAR 시작  -->
+<nav class="navbar navbar-light" style="background-color: #FFA500;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+         <a class="navbar-brand bg-dark" href="index.html"><span class="glyphicon glyphicon-zoom-in"></span> TokTokHam</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+       <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">회원정보<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">회원정보 확인</a></li>
+            <li><a href="#">스크랩</a></li>
+          </ul>
+        </li>
+        <li><a href="#">로그아웃</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> 회원가입</a></li>
+        <li><a data-toggle="modal"  data-backdrop="static"  href="#myModal"><span class="glyphicon glyphicon-log-in"></span> 로그인</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</div>
+
+
+<!--사이드바  -->
+		<div class="sidebar col-sm-2 visible-lg">
+		<div class="text-center" style="margin-top : 150px;">
+	        <ul>
+	        	 <img src="../image/1.jpg" class="img-responsive center-block img-circle" style="border: 30px solid #1a612f; margin-bottom:30px; width: 150px; height: 150px;" alt="hamster">
+	        </ul>
+        </div>
+   		<div class="text-center">
+	        <ul>
+	        	<sapn style="color: black; font-size: 20px;"><strong> 햄토리 회원님! 안녕하세요!</strong></span>
+	        </ul>
+        </div>
+    	<div class="text-center">
+	        <ul>
+	        	<li style="list-style-type: none; font-size: 25px; margin-top:50px; margin-bottom: 20px; color: #14381d;"><strong> 게시판 메뉴 </strong> </li>
+	        	<li style="list-style-type: none; margin-bottom: 18px;"><a href="hospitalBoard.html" style="color: black; font-size: 20px; "><strong>병원 찾기</strong></a></li>
+	        	<li style="list-style-type: none; margin-bottom: 18px;"><a href="hospitalBoard.html" style="color: black; font-size: 20px; "><strong>병원 후기</strong></a></li>
+	        	<li style="list-style-type: none; margin-bottom: 18px;"><a href="hospitalBoard.html" style="color: black; font-size: 20px; "><strong>햄스터 자유 게시판</strong></a></li>
+	        </ul>
+        </div>
+        <div class="text-center">
+	        <ul>
+	        	<li style="font-size: 15px; list-style-type: none;" >
+	        		<input type="search" placeholder="검색한 단어를 입력해주세요" style="border: 3px solid green;">
+	    			<input type="button" value="검색" style="border: none; color: white; background-color: green; height: 29px" onclick="location.href='index.html'">
+	    		</li>
+	        </ul>
+        </div>
+	</div>
+	
+	<!--게시판 테이블  -->
+	<div class="container">
+		<div class="jumbotron">
+		  <h2 class="text-center">특수 병원을 찾아보세요!</h2>
+		  	<div style=" padding: 0px; text-align: center;">
+		      	 <select name="location">
+		      	 	<option value="Busan">부산</option>
+		      	 	<option value="seoul">서울</option>
+		      	 	<option value="daejeon">대전</option>
+		      	 	<option value="daegu">대구</option>
+		      	 	<option value="ulsan">울산</option>
+		      	 	<option value="gangwondo">강원도</option>
+		      	 	<option value="incheon">인천</option>
+		      	 	<option value="jejudo">제주도</option>
+		      	 </select> 
+	      		<input type="text" placeholder="글 검색">
+		  		<button class="btn btn-warning" type="button">검색</button>
+	  		</div>
+	  		
+	  			<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>번호</th>
+				<th>제목</th>
+				<th>평점</th>
+				<th>작성자</th>
+				<th>작성일</th>
+				<th>조회수</th>
+				<th>추천수</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>1</td>	
+				<td>[부산] 없어요 동물 병원 후기</td>
+				<td>★★</td>		
+				<td>햄식이</td>
+				<td>202.07.24</td>	
+				<td>48</td>	
+				<td>192</td>	
+			</tr>
+			<tr>
+				<td>2</td>	
+				<td>[서울] 있나요 동물 병원 후기</td>
+				<td>★★★★</td>		
+				<td>잘햄</td>
+				<td>202.07.22</td>	
+				<td>12</td>	
+				<td>10</td>	
+			</tr>
+			<tr>
+				<td>3</td>	
+				<td>[인천] 제목없음</td>
+				<td>★★</td>		
+				<td>햄순이</td>
+				<td>202.07.20</td>	
+				<td>1</td>	
+				<td>0</td>	
+			</tr>
+			<tr>
+				<td>4</td>	
+				<td>운영자에 의해 삭제된 게시물입니다.</td>
+				<td>★★</td>		
+				<td>악플러</td>
+				<td>202.07.19</td>	
+				<td>200</td>	
+				<td>-100</td>	
+			</tr>
+			<tr>
+				<td>5</td>	
+				<td>[부산] 다들 아는 그곳 후기</td>
+				<td>★★★★</td>		
+				<td>햄만족</td>
+				<td>202.07.19</td>	
+				<td>10</td>	
+				<td>2</td>	
+			</tr>
+			<tr>
+				<td>6</td>	
+				<td>[인천] 인천 새로 생긴 a병원~</td>
+				<td>★</td>		
+				<td>존재하는아이디</td>
+				<td>202.07.11</td>	
+				<td>8</td>	
+				<td>3</td>	
+			</tr>
+			<tr>
+				<td>7</td>	
+				<td>[대구] 심쿵심쿵</td>
+				<td>★★★★★</td>		
+				<td>몽순이</td>
+				<td>202.07.10</td>	
+				<td>50</td>	
+				<td>11</td>	
+			</tr>
+			<tr>
+				<td>8</td>	
+				<td>[강원도] 특수 동물 병원은 없고 눈만 있어요</td>
+				<td>★</td>		
+				<td>내사랑강원도</td>
+				<td>202.07.09</td>	
+				<td>20</td>	
+				<td>14</td>	
+			</tr>
+			<tr>
+				<td>9</td>	
+				<td>[제주도] 올레시장 근처에 있는 병원 후기</td>
+				<td>★★★★★</td>		
+				<td>돌돌아</td>
+				<td>202.07.08</td>	
+				<td>8</td>	
+				<td>2</td>	 
+			</tr>
+			<tr>
+				<td>10</td>	
+				<td>[부산] 울산에서 부산 동물병원까지 차타고</td>
+				<td>★★</td>		
+				<td>햄랑해</td>
+				<td>202.07.01</td>	
+				<td>111</td>	
+				<td>99</td>	
+			</tr>
+		</tbody>
+	</table>
+	  			<button class="pull-right" style="width: 100px; height:30px; background-color: #FFA500; border-radius: 30px; border:none;" onclick="location.href='writeForm.html'">글쓰기</button>
+	  		
+	  	 </div>
+    </div>
+	
+
+
+<!-- footer --> 
+	<div class="container">
+		<div class="jumbotron text-center mt-5 mb-0"> 
+			<p> 햄스터를 아끼는 사람들의 공간<br><span class="text-primary">TokTokHam</span></p> 
+			<h4>문의 및 신고 사항은 <a href="#" style="color: navy; font-weight: bold">'여기를'</a>을 눌러주세요.</h4>
+		</div>	
+	</div>
+</body>
+</html>
+
+
+		
+		
+
+	<!--제이쿼리 먼저 올리고 부트스트랩 올리고!  -->
+<script src="js/jquery-3.5.1.js"></script>
+	<script src="js/bootstrap.js"></script>
+    
+</body>
+</html>

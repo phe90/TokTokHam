@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+<head>
+<meta charset="utf-8">
+<!--  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 인터넷 익스플로 최신버전으로 동작해라 -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--반응형으로 만들때 필요함  -->
+<title>TokTok Ham!</title>
+<!--****************************************************************************-->
+<!-- C:\exampro\.metadata\.plugins\org.eclipse.wst.server.core -> 서버 포트 변경 -->
+<!--****************************************************************************-->
+<!-- Bootstrap -->
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-theme.css" rel="stylesheet">
+<link href="css/custom2.css" rel="stylesheet">
+<link href="css/kfonts2.css" rel="stylesheet">
+<style>
+
+body {
+	padding-top: 20px;
+}
+
+a{
+	color: #ffffff;
+	font-size: 13px;
+}
+ul{
+	padding: 0px;
+}
+
+ h2 { margin: 20px 0} 
+
+.navbar .navbar-toggle .icon-bar {
+     background-color: #ffffff;
+}
+
+
+ </style>
+
+</head>
+
+
+<body>
+<div class="container">
+<!--NAVBAR 시작  -->
+<nav class="navbar navbar-light" style="background-color: #FFA500;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+         <a class="navbar-brand bg-dark" href="#"><span class="glyphicon glyphicon-zoom-in"></span> TokTokHam</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+       <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">회원정보<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">회원정보 확인</a></li>
+            <li><a href="#">스크랩</a></li>
+          </ul>
+        </li>
+        <li><a href="#">로그아웃</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span>회원가입</a></li>
+        <li><a data-toggle="modal"  data-backdrop="static"  href="#myModal"><span class="glyphicon glyphicon-log-in"></span> 로그인</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</div>
+<!--Navbar 끝!  -->
+
+
+	<!--회원 가입 폼 시작 -->
+	<div class="container">
+		<div class="jumbotron" style="background-color: #1a612f">
+			<div class="row">
+				<div class="col-sm-6">
+					<img alt="햄스터 사진" src="image/hamster.jpg" style="height: 500px; width: 500px; border: none; ">
+				</div>
+				<div class="col-sm-6">
+					<div class="text-center" >
+						<h2 style="color:white"><strong>회원가입</strong></h2>
+					</div>
+					<div class="row"  style="margin-top: 40px;">
+						<div class="col-sm-2"></div>
+						<div class="col-sm-3 text-center" style="background-color: white; height: 30px; border-radius: 10px;">
+							<h5><strong>아이디</strong></h5>
+						</div>
+						<div class="col-sm-4"> 
+							<input type="text" placeholder="아이디를 입력해주세요" style="background-color: white; height: 30px; border-radius: 10px; border: none;">
+						</div>
+						<div class="col-sm-3">
+							<button style="background-color: #f2cb5e; height: 30px; border-radius: 10px; border: none; width: 100px;"><strong>중복확인</strong></button>
+						</div>
+					</div>
+					
+					<div class="row" style="margin-top: 20px;">
+						<div class="col-sm-2"></div>
+						<div class="col-sm-3 text-center" style="background-color: white; height: 30px; border-radius: 10px;">
+							<h5><strong>비밀번호</strong></h5>
+						</div>
+						<div class="col-sm-4"> 
+							<input type="password" placeholder="비밀번호를 입력해주세요" style="background-color: white; height: 30px; border-radius: 10px; border: none;">
+						</div>
+						<div class="col-sm-3">
+						</div>
+					</div>
+					<div class="row" style="margin-top: 20px;">
+						<div class="col-sm-2"></div>
+						<div class="col-sm-3 text-center" style="background-color: white; height: 30px; border-radius: 10px;">
+							<h5><strong>비밀번호 확인</strong></h5>
+						</div>
+						<div class="col-sm-4"> 
+							<input type="password" placeholder="비밀번호를 입력해주세요" style="background-color: white; height: 30px; border-radius: 10px; border: none;">
+						</div>
+						<div class="col-sm-3">
+						</div>
+					</div>
+					<div class="row" style="margin-top: 20px;">
+						<div class="col-sm-2"></div>
+						<div class="col-sm-3 text-center" style="background-color: white; height: 30px; border-radius: 10px;">
+							<h5><strong>이메일</strong></h5>
+						</div>
+						<div class="col-sm-4"> 
+							<input type="email" placeholder="이메일을 입력해주세요" style="background-color: white; height: 30px; border-radius: 10px; border: none;">
+						</div>
+						<div class="col-sm-3">
+							<button style="background-color: #f2cb5e; height: 30px; border-radius: 10px; border: none; width: 100px;"><strong>이메일인증</strong></button>
+						</div>
+					</div>
+					<div class="row" style="margin-top: 8px;">
+						<div class="col-sm-2"></div>
+						<div class="col-sm-7" style="color: #f2cb5e;">
+							<input type="checkbox" style="font-size: 10px; font-weight: bold; "><strong> 이메일로 소식을 받아보시겠습니까?</strong>
+						</div>
+						<div class="col-sm-3">
+						</div>
+					</div>
+					<div class="row" style="margin-top: 20px;">
+						<div class="col-sm-2"></div>
+						<div class="col-sm-3 text-center" style="background-color: white; height: 30px; border-radius: 10px;">
+							<h5><strong>닉네임</strong></h5>
+						</div>
+						<div class="col-sm-4"> 
+							<input type="password" placeholder="비밀번호를 입력해주세요" style="background-color: white; height: 30px; border-radius: 10px; border: none;">
+						</div>
+						<div class="col-sm-3">
+						</div>
+					</div>
+					<div class="row" style="margin-top: 50px;">
+						<div class="col-sm-2"></div>
+						<div class="col-sm-8">
+							<button style="border: none; background-color: #f2cb5e; width: 300px; border-radius: 30px; height: 50px;" onclick="javascript:join()"><strong>회원가입</strong></button>
+						</div>
+						<div class="col-sm-2"></div>
+					</div>
+					
+					
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+		
+		<!-- footer --> 
+		<!-- <div class="jumbotron text-center mt-5 mb-0"> 
+			<p> 햄스터를 아끼는 사람들의 공간<br><span class="text-primary">TokTokHam</span></p> 
+			<h4>문의 및 신고 사항은 <a data-toggle="modal" data-backdrop="static"  href="#letter" style="color: navy; font-weight: bold;">'여기를'</a>을 눌러주세요.</h4> 모달...
+		</div>
+   -->
+	<!--제이쿼리 먼저 올리고 부트스트랩 올리고!  -->
+	<script src="js/jquery-3.5.1.js"></script>
+	<script src="js/bootstrap.js"></script>
+	
+	<!-- 회원가입 알립창  -->
+	<script>
+		function join(){
+			alert('회원가입 되셨습니다.');
+			location.href="index.html";
+		}
+	</script>
+
+
+</body>
+</html>

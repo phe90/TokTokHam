@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+<head>
+<meta charset="utf-8">
+<!--  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 인터넷 익스플로 최신버전으로 동작해라 -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--반응형으로 만들때 필요함  -->
+<title>TokTok Ham!</title>
+<!--****************************************************************************-->
+<!-- C:\exampro\.metadata\.plugins\org.eclipse.wst.server.core -> 서버 포트 변경 -->
+<!--****************************************************************************-->
+<!-- Bootstrap -->
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-theme.css" rel="stylesheet">
+<link href="css/custom2.css" rel="stylesheet">
+<link href="css/kfonts2.css" rel="stylesheet">
+<style>
+
+body {
+	padding-top: 20px;
+}
+
+.sidebar { 	 
+     background-color: #ffcb3b;
+     width: 350;
+     position: fixed;
+     float: left;
+     margin: 0;
+     padding: 0;
+     top: 0;
+     left: 0;
+     bottom: 0;
+     height : 100%;
+     cursor: default;
+     overflow-y: auto;
+     z-index: 100;
+ }
+
+ul.text-center{
+	padding: 0px;
+	margin: 0px;
+}
+
+div.row{
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+
+ </style>
+
+</head>
+
+
+<body>
+<div class="container">
+    <!--NAVBAR 시작  -->
+    <nav class="navbar navbar-light" style="background-color: #FFA500;">
+    <div class="container-fluid">
+        <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>                        
+        </button>
+            <a class="navbar-brand bg-dark" href="index.html"><span class="glyphicon glyphicon-zoom-in"></span> TokTokHam</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">회원정보<span class="caret"></span></a>
+            <ul class="dropdown-menu">
+                <li><a href="#">회원정보 확인</a></li>
+                <li><a href="#">스크랩</a></li>
+            </ul>
+            </li>
+            <li><a href="#">로그아웃</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> 회원가입</a></li>
+            <li><a data-toggle="modal"  data-backdrop="static"  href="#myModal"><span class="glyphicon glyphicon-log-in"></span> 로그인</a></li>
+        </ul>
+        </div>
+    </div>
+    </nav>
+</div>
+
+
+
+
+<!--사이드바  -->
+	<div class="sidebar col-sm-2 visible-lg">
+		<div class="text-center" style="margin-top : 150px;">
+	        <ul>
+	        	 <img src="../image/1.jpg" class="img-responsive center-block img-circle" style="border: 30px solid #1a612f; margin-bottom:30px; width: 150px; height: 150px;" alt="hamster">
+	        </ul>
+        </div>
+   		<div class="text-center">
+	        <ul>
+	        	<sapn style="color: black; font-size: 20px;"><strong> 햄토리 회원님! 안녕하세요!</strong></span>
+	        </ul>
+        </div>
+    	<div class="text-center">
+	        <ul>
+	        	<li style="list-style-type: none; font-size: 25px; margin-top:50px; margin-bottom: 20px; color: #14381d;"><strong> 게시판 메뉴 </strong> </li>
+	        	<li style="list-style-type: none; margin-bottom: 18px;"><a href="hospitalBoard.html" style="color: black; font-size: 20px; "><strong>병원 찾기</strong></a></li>
+	        	<li style="list-style-type: none; margin-bottom: 18px;"><a href="hospitalBoard.html" style="color: black; font-size: 20px; "><strong>병원 후기</strong></a></li>
+	        	<li style="list-style-type: none; margin-bottom: 18px;"><a href="hospitalBoard.html" style="color: black; font-size: 20px; "><strong>햄스터 자유 게시판</strong></a></li>
+	        </ul>
+        </div>
+        <div class="text-center">
+	        <ul>
+	        	<li style="font-size: 15px; list-style-type: none;" >
+	        		<input type="search" placeholder="검색한 단어를 입력해주세요" style="border: 3px solid green;">
+	    			<input type="button" value="검색" style="border: none; color: white; background-color: green; height: 29px" onclick="location.href='index.html'">
+	    		</li>
+	        </ul>
+        </div>
+	</div>
+    
+
+       
+     <!-- 작성자 정보 
+        <div class="row">
+            <div class="col-sm-6" style="background-color: gainsboro; border: solid 2px lightgoldenrodyellow;">
+                 <h2><img src="../image/1.jpg" class="img-responsive center-block img-circle" style="width: 250px; height: 250px; " alt="작성회원썸네일"></h2>
+            </div>
+            <div class="col-sm-6">
+                <div class="panel panel-warning">
+                    <div class="panel-heading">작성자 : 햄멋쟁이</div>
+                    <div class="panel-body">가입일 : 2020.05.06</div>
+                    <div class="panel-body">출석 횟수 : 40회</div>
+                    <div class="panel-body">작성글 : 30개</div>
+                    <div class="panel-body">HamPoint : 450p</div>
+                    <div class="panel-body">등급 : 우수햄원</div>
+                  </div>
+            </div>
+            <div>
+                <div style="padding: 30px;"><span>  </span></div>
+                <div class="container">
+                    <h2 class="text-center">서동 병원 참 좋습니다.</h2>
+                    <p class="text-center">평점 : ★★★★★</p>                                                                                      
+                    <div class="table-responsive ">          
+                        <table class="table" style="border: solid 3px black; margin-top: 10px; ">
+                        <tbody >
+                            <tr>
+                                <td style="width: 100px; background-color: lightgray;" class="text-center">내용</td>
+                                <td style="width: 500px; height: 600px; padding: 50px;" > 
+                                    <span>
+						                                         솔직히 특수 동물 병원 찾기도 힘들고, 특수 아닌데는 햄스터에 대해서 잘 몰라서  오진을 하는데도 많고, <br>
+						                                         수술 거부당하기도 하는데.... 서동은 믿음직해요.  선생님께서 유학을 다녀오셔서 그런가 수술에도 확신이 있어보이고<br>
+						                                        실제로도 수술을 너무 잘하셔요 저 감동 받았읍니다.. 실제로도 수술을 너무 잘하셔요 저 감동 받았읍니다.. 실제로도 수술을 너무 잘하셔요 저 감동 받았읍니다..
+						                 <br> 실제로도 수술을 너무 잘하셔요 저 감동 받았읍니다.. 실제로도 수술을 너무 잘하셔요 저 감동 받았읍니다..
+						                                         실제로도 수술을 너무 잘하셔요 저 감동 받았읍니다.. <br>실제로도 수술을 너무 잘하셔요 저 감동 받았읍니다.. 실제로도 수술을 너무 잘하셔요 저 감동 받았읍니다..<br> 실제로도 수술을 너무 잘하셔요 저 감동 받았읍니다..<br> 실제로도 수술을 너무 잘하셔요 저 감동 받았읍니다..
+						                                          실제로도 수술을 너무 잘하셔요 저 감동 받았읍니다..<br> 실제로도 수술을 너무 잘하셔요 저 감동 받았읍니다.. 실제로도 수술을 너무 잘하셔요 저 감동 받았읍니다..<br> 실제로도 수술을 너무 잘하셔요 저 감동 받았읍니다..<br> 실제로도 수술을 너무 잘하셔요 저 감동 받았읍니다..
+						                                           실제로도 수술을 너무 잘하셔요 저 감동 받았읍니다..<br> 실제로도 수술을 너무 잘하셔요 저 감동 받았읍니다.. 실제로도 수술을 너무 잘하셔요 저 감동 받았읍니다..<br> 실제로도 수술을 너무 잘하셔요 저 감동 받았읍니다..<br> 실제로도 수술을 너무 잘하셔요 저 감동 받았읍니다..<br> 실제로도 수술을 너무 잘하셔요 저 감동 받았읍니다..
+						                                            실제로도 수술을 너무 잘하셔요 저 감동 받았읍니다..<br> 실제로도 수술을 너무 잘하셔요 저 감동 받았읍니다.. 실제로도 수술을 너무 잘하셔요 저 감동 받았읍니다..<br> 실제로도 수술을 너무 잘하셔요 저 감동 받았읍니다..<br> 실제로도 수술을 너무 잘하셔요 저 감동 받았읍니다..
+
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="width: 100px; background-color: lightgray;"class="text-center">파일</td>
+                                <td style="width: 500px; "><a href="#">이미지 다운로드링크</a></td>
+                            </tr>
+                        </tbody>
+                        </table>
+                    </div>
+                    
+                    <div>
+                    	<button class="pull-right" style="margin: 10px; border-radius: 20px; border: none; background-color: sky; height: 40px;" onclick="location.href='starBoard.html'">목록으로</button>
+                    	<button class="pull-right" style="margin: 10px; border-radius: 20px; border: none; background-color: pink; height: 40px; width: 50px;">삭제</button>
+                    	<button class="pull-right"  style="margin: 10px; border-radius: 20px; border: none; background-color: #ffa500; height: 40px; width: 50px;">수정</button>
+                    </div>
+                  </div>
+
+            </div>
+        </div> -->
+        
+        
+        	<div class="container">
+		<div class="jumbotron">
+			<div class="text-center" >
+				<h2><strong>"뭐뭐" 회원님의 글</strong></h2>
+			</div>
+				<div class="row" style="margin-top: 20px;">
+					<div class="col-sm-2"></div>
+					<div class="col-sm-3 text-center" style="background-color: white; height: 30px; border-radius: 10px;">
+						<h5><strong>제목</strong></h5>
+					</div>
+					<div class="col-sm-4 text-center" style="width: 420px; background-color: white; height: 30px; border-radius: 10px; margin-left:20px;"> 
+						<span><strong>부산 ㄷㄷ동물 병원 후기입니당.!</strong></span>
+					</div>
+					<div class="col-sm-3">
+					</div>
+				</div>
+				<div class="row" style="margin-top: 20px;">
+					<div class="col-sm-2"></div>
+					<div class="col-sm-3 text-center" style="background-color: white; height: 30px; border-radius: 10px;">
+						<h5><strong>평점</strong></h5>
+					</div>
+					<div class="col-sm-4 text-center" style="width: 420px; background-color: white; height: 30px; border-radius: 10px; margin-left:20px;"> 
+						<span><strong>★★★★★</strong></span>
+					</div>
+				</div>
+				<div class="row" style="margin-top: 20px;">
+					<div class="col-sm-2"></div>
+					<div class="col-sm-8" style="background-color: white; border-radius: 10px;">
+						<h5 class="text-center"><strong>내용</strong></h5>
+					</div>
+					<div class="col-sm-2"></div>
+				</div>
+				<div class="row" style="margin-top: 20px;">
+					<div class="col-sm-2"></div>
+						<div class="col-sm-8 text-center" style="width: 700px; background-color: white; height: 400px; border-radius: 10px; padding: 50px;"> 
+						<span><strong>솔직히 기대도 안했는데,ㅡ 너무 좋았구요. 할말이 없는데 택스트는 채워야하구욤 <br> 
+							 	햄스터는 왜이리 귀여운지 모르겠구욤. 너무 귀엽구 털에서 나는 꼬순내두 넘 좋구 분홍코도 넘 좋구 <br> 
+							 	검은 눈도 넘 귀엽구 멍청한 표정도 넘 귀엽구 다 귀엽구 안아프면 좋겠ㄷ구<br> 
+							 	오래 살면 얼마나 좋을까<br> 
+							 	그런 생각두 들구<br> 
+							 	한 5년이라도 살아주면 좋겠당<br> 
+							 	솔직히 기대도 안했는데,ㅡ 너무 좋았구요. 할말이 없는데 택스트는 채워야하구욤 <br> 
+							 	햄스터는 왜이리 귀여운지 모르겠구욤. 너무 귀엽구 털에서 나는 꼬순내두 넘 좋구 분홍코도 넘 좋구 <br> 
+							 	검은 눈도 넘 귀엽구 멍청한 표정도 넘 귀엽구 다 귀엽구 안아프면 좋겠ㄷ구<br> 
+							 	오래 살면 얼마나 좋을까<br> 
+							 	그런 생각두 들구<br> 
+							 	한 5년이라도 살아주면 좋겠당<br> 
+							  </strong></span>
+					</div>
+					<div class="col-sm-2"></div>
+				</div>
+				<div class="row"  style="margin-top: 20px;">
+					<div class="col-sm-2"></div>
+					<div class="col-sm-8">
+						<button id="reply-toggle"  onclick="javascript:reply()"
+						 style="background-color: #ffa500; margin-left:50px; border: none; border-radius: 30px;
+						height:30px; width:600px;"><strong>댓글보기</strong></button>
+					</div>
+					<div class="col-sm-2">
+						<button type="button" data-toggle="modal" data-target="#replyWrite">
+							댓글쓰기
+						</button>
+					</div>
+				</div>
+				
+				
+				<div id="reply-board" style="margin-top: 20px;">
+					<div class="row" >
+						<div class="col-sm-2"></div>
+						<div class="col-sm-2" style="margin-top: 50px;">
+								 <img src="../image/1.jpg" class="img-responsive center-block img-circle" style=" margin-bottom:30px; margin-top:20px; width: 50px; height: 50px; " alt="hamster">
+						</div>
+						<div class="col-sm-6" style="margin-top: 50px; background-color: white; height: 80px; width: 400px; border-radius: 30px; padding: 30px;">
+						 	<span>오, 마침 새로 생겨서 가보려했는데 좋은 후기 감사해요. </span>
+						</div>
+						<div class="col-sm-2">
+							<button>댓글 수정하기</button>
+						</div>
+					</div>
+					<div class="row" >
+						<div class="col-sm-2"></div>
+						<div class="col-sm-2" style="margin-top: 50px;">
+								 <img src="../image/1.jpg" class="img-responsive center-block img-circle" style=" margin-bottom:30px; margin-top:20px; width: 50px; height: 50px; " alt="hamster">
+						</div>
+						<div class="col-sm-6" style="margin-top: 50px; background-color: white; height: 80px; width: 400px; border-radius: 30px; padding: 30px;">
+						 	<span>오, 마침 새로 생겨서 가보려했는데 좋은 후기 감사해요. </span>
+						</div>
+						<div class="col-sm-2">
+							<button>댓글 수정하기</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+<!-- footer --> 
+	<div class="container">
+		<div class="jumbotron text-center mt-5 mb-0"> 
+			<p> 햄스터를 아끼는 사람들의 공간<br><span class="text-primary">TokTokHam</span></p> 
+			<h4>문의 및 신고 사항은 <a href="#" style="color: navy; font-weight: bold">'여기를'</a>을 눌러주세요.</h4>
+		</div>	
+	</div>
+
+
+
+<!-- 댓글 모달 -->
+	<div class="modal fade" id="replyWrite"aria-labelledby="myModalLabel">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<div class="text-center" >
+				<h2><strong>댓글쓰기</strong></h2>
+			</div>
+				<div class="row" style="margin-top: 20px;">
+					<div class="col-sm-2"></div>
+					<div class="col-sm-8" style="background-color: white; border-radius: 10px;">
+						<textarea rows="20" cols="53" style=" border: none;" placeholder="내용을 입력해주세요"></textarea>
+					</div>
+					<div class="col-sm-2"></div>
+				</div>
+				<div class="row" style="margin-top: 20px;">
+					<div class="col-sm-2"></div>
+					<div class="col-sm-8">
+						<button style="background-color: #ffa500;  border: none; border-radius: 30px;
+						height:30px; width:400px;" onclick="location.href='starBoardview.html'"><strong>글쓰기</strong></button>
+					</div>
+					<div class="col-sm-2">
+					</div>
+				</div>
+			</div>
+				
+				</div>
+			</div>
+		</div>
+	
+	</div>		
+		
+		
+		
+		
+		
+		
+
+	<!--제이쿼리 먼저 올리고 부트스트랩 올리고!  -->
+	<script src="js/jquery-3.5.1.js"></script>
+	<script src="js/bootstrap.js"></script>
+
+	<script>
+		$('#reply-board').hide();
+		
+		
+		$('#reply-toggle').click(function(){
+			
+		if($('#reply-toggle').text() == "댓글보기"){
+			
+		 	$('#reply-board').show();
+			$('#reply-toggle').text("댓글접기");
+		
+		}else{
+			$('#reply-board').hide();
+			$('#reply-toggle').text("댓글보기");
+		}
+	
+
+ 
+		
+		
+		
+		});
+	</script>
+	
+</body>
+</html>

@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ko-kr">
+<head>
+<meta charset="utf-8">
+<!--  <meta http-equiv="X-UA-Compatible" content="IE=edge"> 인터넷 익스플로 최신버전으로 동작해라 -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--반응형으로 만들때 필요함  -->
+<title>TokTok Ham!</title>
+<!--****************************************************************************-->
+<!-- C:\exampro\.metadata\.plugins\org.eclipse.wst.server.core -> 서버 포트 변경 -->
+<!--****************************************************************************-->
+<!-- Bootstrap -->
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/bootstrap-theme.css" rel="stylesheet">
+<link href="css/custom2.css" rel="stylesheet">
+<link href="css/kfonts2.css" rel="stylesheet">
+<style>
+
+body {
+	padding-top: 20px;
+}
+
+.sidebar { 	 
+     background-color: #ffcb3b;
+     width: 350;
+     position: fixed;
+     float: left;
+     margin: 0;
+     padding: 0;
+     top: 0;
+     left: 0;
+     bottom: 0;
+     height : 100%;
+     cursor: default;
+     overflow-y: auto;
+     z-index: 100;
+ }
+    
+ul.text-center{
+	padding: 0px;
+	margin: 0px;
+}
+
+div.row{
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+
+ </style>
+
+</head>
+
+
+<body>
+<div class="container">
+<!--NAVBAR 시작  -->
+<nav class="navbar navbar-light" style="background-color: #FFA500;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+         <a class="navbar-brand bg-dark" href="index.html"><span class="glyphicon glyphicon-zoom-in"></span> TokTokHam</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+       <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">회원정보<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">회원정보 확인</a></li>
+            <li><a href="#">스크랩</a></li>
+          </ul>
+        </li>
+        <li><a href="#">로그아웃</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> 회원가입</a></li>
+        <li><a data-toggle="modal"  data-backdrop="static"  href="#myModal"><span class="glyphicon glyphicon-log-in"></span> 로그인</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+</div>
+
+
+
+
+
+<!--사이드바  -->
+	<div class="sidebar col-sm-2 visible-lg">
+		<div class="text-center" style="margin-top : 150px;">
+	        <ul>
+	        	 <img src="../image/1.jpg" class="img-responsive center-block img-circle" style="border: 30px solid #1a612f; margin-bottom:30px; width: 150px; height: 150px;" alt="hamster">
+	        </ul>
+        </div>
+   		<div class="text-center">
+	        <ul>
+	        	<sapn style="color: black; font-size: 20px;"><strong> 햄토리 회원님! 안녕하세요!</strong></span>
+	        </ul>
+        </div>
+    	<div class="text-center">
+	        <ul>
+	        	<li style="list-style-type: none; font-size: 25px; margin-top:50px; margin-bottom: 20px; color: #14381d;"><strong> 게시판 메뉴 </strong> </li>
+	        	<li style="list-style-type: none; margin-bottom: 18px;"><a href="hospitalBoard.html" style="color: black; font-size: 20px; "><strong>병원 찾기</strong></a></li>
+	        	<li style="list-style-type: none; margin-bottom: 18px;"><a href="hospitalBoard.html" style="color: black; font-size: 20px; "><strong>병원 후기</strong></a></li>
+	        	<li style="list-style-type: none; margin-bottom: 18px;"><a href="hospitalBoard.html" style="color: black; font-size: 20px; "><strong>햄스터 자유 게시판</strong></a></li>
+	        </ul>
+        </div>
+        <div class="text-center">
+	        <ul>
+	        	<li style="font-size: 15px; list-style-type: none;" >
+	        		<input type="search" placeholder="검색한 단어를 입력해주세요" style="border: 3px solid green;">
+	    			<input type="button" value="검색" style="border: none; color: white; background-color: green; height: 29px" onclick="location.href='index.html'">
+	    		</li>
+	        </ul>
+        </div>
+	</div>
+	
+	
+	
+	<!--게시판 테이블  -->
+	<div class="container text-center">
+		  <div class="row ">
+			<div class="col-sm-2">
+					<div class="panel panel-danger">
+			      <div class="panel-heading">서동메디컬센터</div>
+			      <div class="panel-body"><span class="glyphicon glyphicon-earphone"></span> 050-0101-0101</div>
+			    </div>
+		  	</div>
+			<div class="col-sm-2">
+		  		 <div class="panel panel-danger">
+			      <div class="panel-heading">서동메디컬센터</div>
+			      <div class="panel-body"><span class="glyphicon glyphicon-earphone"></span> 050-0101-0101</div>
+			    </div>
+		  	</div>
+			<div class="col-sm-2">
+		  		 <div class="panel panel-danger">
+			      <div class="panel-heading">서동메디컬센터</div>
+			      <div class="panel-body"><span class="glyphicon glyphicon-earphone"></span> 050-0101-0101</div>
+			    </div>
+		  	</div>
+			<div class="col-sm-2">
+		  		 <div class="panel panel-danger">
+			      <div class="panel-heading">서동메디컬센터</div>
+			      <div class="panel-body"><span class="glyphicon glyphicon-earphone"></span> 050-0101-0101</div>
+			    </div>
+			</div>
+			<div class="col-sm-2">
+				<div class="panel panel-danger">
+			   <div class="panel-heading">서동메디컬센터</div>
+			   <div class="panel-body"><span class="glyphicon glyphicon-earphone"></span> 050-0101-0101</div>
+			 </div>
+		 </div>
+			<div class="col-sm-2">
+				<div class="panel panel-danger">
+			   <div class="panel-heading">부산</div>
+			   <div class="panel-body"><a>더보기</a></div>
+			 </div>
+		   </div>
+		<!-- 서울-->
+			<div class="col-sm-2">
+				<div class="panel panel-info">
+				<div class="panel-heading">용인동물병원</div>
+				<div class="panel-body"><span class="glyphicon glyphicon-earphone"></span> 050-0101-0101</div>
+				</div>
+			</div>
+			<div class="col-sm-2">
+					<div class="panel panel-info">
+				<div class="panel-heading">행동동물병원</div>
+				<div class="panel-body"><span class="glyphicon glyphicon-earphone"></span> 050-0101-0101</div>
+				</div>
+			</div>
+			<div class="col-sm-2">
+				<div class="panel panel-info">
+				<div class="panel-heading">하하호호병원</div>
+				<div class="panel-body"><span class="glyphicon glyphicon-earphone"></span> 050-0101-0101</div>
+				</div>
+			</div>
+			<div class="col-sm-2">
+				<div class="panel panel-info">
+				<div class="panel-heading">길낄깔깔병원</div>
+				<div class="panel-body"><span class="glyphicon glyphicon-earphone"></span> 050-0101-0101</div>
+				</div>
+			</div>
+			<div class="col-sm-2">
+				<div class="panel panel-info">
+				<div class="panel-heading">서울</div>
+				<div class="panel-body"><a>123211232</a></div>
+				</div>
+			</div>
+			<div class="col-sm-2">
+				<div class="panel panel-info">
+				<div class="panel-heading">서울</div>
+				<div class="panel-body"><a>더보기</a></div>
+				</div>
+			</div>
+		
+				<!-- 제주도-->
+				<div class="col-sm-2">
+					<div class="panel panel-success">
+					<div class="panel-heading">한라산동물</div>
+					<div class="panel-body"><span class="glyphicon glyphicon-earphone"></span> 050-0101-0101</div>
+					</div>
+				</div>
+				<div class="col-sm-2">
+						<div class="panel panel-success">
+					<div class="panel-heading">성산일출동물</div>
+					<div class="panel-body"><span class="glyphicon glyphicon-earphone"></span> 050-0101-0101</div>
+					</div>
+				</div>
+				<div class="col-sm-2">
+					<div class="panel panel-success">
+					<div class="panel-heading">렌트카동물</div>
+					<div class="panel-body"><span class="glyphicon glyphicon-earphone"></span> 050-0101-0101</div>
+					</div>
+				</div>
+				<div class="col-sm-2">
+					<div class="panel panel-success">
+					<div class="panel-heading">아주아주</div>
+					<div class="panel-body"><span class="glyphicon glyphicon-earphone"></span> 050-0101-0101</div>
+					</div>
+				</div>
+				<div class="col-sm-2">
+					<div class="panel panel-success">
+					<div class="panel-heading">아주아주</div>
+					<div class="panel-body"><span class="glyphicon glyphicon-earphone"></span> 050-0101-0101</div>
+					</div>
+				</div>
+			
+				<div class="col-sm-2">
+					<div class="panel panel-success">
+					<div class="panel-heading">제주도</div>
+					<div class="panel-body"><a>더보기</a></div>
+					</div>
+				</div>
+			
+					<!-- 제주도-->
+					<div class="col-sm-2">
+						<div class="panel panel-default">
+						<div class="panel-heading">한라산동물</div>
+						<div class="panel-body"><span class="glyphicon glyphicon-earphone"></span> 050-0101-0101</div>
+						</div>
+					</div>
+					<div class="col-sm-2">
+							<div class="panel panel-default">
+						<div class="panel-heading">성산일출동물</div>
+						<div class="panel-body"><span class="glyphicon glyphicon-earphone"></span> 050-0101-0101</div>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="panel panel-default">
+						<div class="panel-heading">렌트카동물</div>
+						<div class="panel-body"><span class="glyphicon glyphicon-earphone"></span> 050-0101-0101</div>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="panel panel-default">
+						<div class="panel-heading">렌트카동물</div>
+						<div class="panel-body"><span class="glyphicon glyphicon-earphone"></span> 050-0101-0101</div>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="panel panel-default">
+						<div class="panel-heading">아주아주</div>
+						<div class="panel-body"><span class="glyphicon glyphicon-earphone"></span> 050-0101-0101</div>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="panel panel-default">
+						<div class="panel-heading">제주도</div>
+						<div class="panel-body"><a>더보기</a></div>
+						</div>
+					</div>
+
+						<!-- 제주도-->
+				<div class="col-sm-2">
+					<div class="panel panel-warning">
+					<div class="panel-heading">한라산동물</div>
+					<div class="panel-body"><span class="glyphicon glyphicon-earphone"></span> 050-0101-0101</div>
+					</div>
+				</div>
+				<div class="col-sm-2">
+						<div class="panel panel-warning">
+					<div class="panel-heading">성산일출동물</div>
+					<div class="panel-body"><span class="glyphicon glyphicon-earphone"></span> 050-0101-0101</div>
+					</div>
+				</div>
+				<div class="col-sm-2">
+					<div class="panel panel-warning">
+				<div class="panel-heading">성산일출동물</div>
+				<div class="panel-body"><span class="glyphicon glyphicon-earphone"></span> 050-0101-0101</div>
+				</div>
+				</div>
+				<div class="col-sm-2">
+					<div class="panel panel-warning">
+					<div class="panel-heading">렌트카동물</div>
+					<div class="panel-body"><span class="glyphicon glyphicon-earphone"></span> 050-0101-0101</div>
+					</div>
+				</div>
+				<div class="col-sm-2">
+					<div class="panel panel-warning">
+					<div class="panel-heading">아주아주</div>
+					<div class="panel-body"><span class="glyphicon glyphicon-earphone"></span> 050-0101-0101</div>
+					</div>
+				</div>
+				<div class="col-sm-2">
+					<div class="panel panel-warning">
+					<div class="panel-heading">제주도</div>
+					<div class="panel-body"><a>더보기</a></div>
+					</div>
+				</div>
+
+					<!-- 제주도-->
+					<div class="col-sm-2">
+						<div class="panel panel-success">
+						<div class="panel-heading">한라산동물</div>
+						<div class="panel-body"><span class="glyphicon glyphicon-earphone"></span> 050-0101-0101</div>
+						</div>
+					</div>
+					<div class="col-sm-2">
+							<div class="panel panel-success">
+						<div class="panel-heading">성산일출동물</div>
+						<div class="panel-body"><span class="glyphicon glyphicon-earphone"></span> 050-0101-0101</div>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="panel panel-success">
+						<div class="panel-heading">렌트카동물</div>
+						<div class="panel-body"><span class="glyphicon glyphicon-earphone"></span> 050-0101-0101</div>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="panel panel-success">
+						<div class="panel-heading">아주아주</div>
+						<div class="panel-body"><span class="glyphicon glyphicon-earphone"></span> 050-0101-0101</div>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="panel panel-success">
+						<div class="panel-heading">아주아주</div>
+						<div class="panel-body"><span class="glyphicon glyphicon-earphone"></span> 050-0101-0101</div>
+						</div>
+					</div>
+					<div class="col-sm-2">
+						<div class="panel panel-success">
+						<div class="panel-heading">제주도</div>
+						<div class="panel-body"><a>더보기</a></div>
+						</div>
+					</div>	  
+	</div>			
+</div>
+	<!--search-->
+	<div class="container">
+		<div class="jumbotron" style="background-color:#FFA500;">
+			<h2 class="text-center" style="font-weight: bold;">찾고자 하는 병원이 없다구요? 검색해보세요 </h2>	
+			<div class="text-center" >
+				<select style="font-size: 25px;">
+					<option value="seoul">서울</option>
+					<option value="seoul">부산</option>
+					<option value="seoul">제주도</option>
+					<option value="seoul">경기도</option>
+				</select>
+				<input type="search" placeholder="검색할 단어" style="font-size: 25px;">
+				<button style="font-size: 25px; background-color: darkorange; color: white; border: none;">검색</button>
+			</div>
+		</div>
+	</div>
+
+
+
+
+
+
+
+
+
+<!-- footer --> 
+	<div class="container">
+		<div class="jumbotron text-center mt-5 mb-0"> 
+			<p> 햄스터를 아끼는 사람들의 공간<br><span class="text-primary">TokTokHam</span></p> 
+			<h4>문의 및 신고 사항은 <a href="#" style="color: navy; font-weight: bold">'여기를'</a>을 눌러주세요.</h4>
+		</div>	
+	</div>
+
+	
+	
+	
+</body>
+</html>
+
+
+		
+		
+
+	<!--제이쿼리 먼저 올리고 부트스트랩 올리고!  -->
+	<script src="js/jquery-3.5.1.js"></script>
+	<script src="js/bootstrap.js"></script>
+
+
+</body>
+</html>
